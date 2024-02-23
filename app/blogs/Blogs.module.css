@@ -1,0 +1,21 @@
+.blogs { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.blogPage { padding-left: 1rem; };
+
+.heading { padding: 30px 0; font-size: 3rem; padding-left: 2rem;}
+
+.imageDiv { padding-bottom: 2rem; display: flex; justify-content: center;}
+
+.contentDiv ul, .blogPage { padding-left: 1.5rem;};
+
+.blogPage > h1 { float: left; padding: 20px;}
+.contentDiv h1, .contentDiv h2, .contentDiv h3 {font-size: 200%;};
+
+.contentDiv p, .contentDiv ul { font-size: 150%;}
+
+

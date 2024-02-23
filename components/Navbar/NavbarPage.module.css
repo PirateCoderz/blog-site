@@ -1,0 +1,60 @@
+
+.header {
+    --menu-height: 70px;
+    height: var(--menu-height);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #010304;
+}
+
+.ul {
+    list-style: none;
+    display: flex;
+    text-transform: uppercase;
+    flex-direction: row;
+}
+
+.ul li {
+    margin: 10px 8px;
+}
+.ul li a {
+    text-decoration: none;
+    color: #7DFCED;
+}   
+.toggleBtn{
+    display: none;
+}
+
+.svgOpened { display: block;}
+.svgClosed { display: none;}
+
+
+.callOption { display: flex; flex-direction: column;}
+.callOptionText { font-size: 0.75rem; color: #7efced;}
+
+
+
+@media screen and (max-width:768px) {
+    .navbar, .menuClosed, .callOption { display: none; }
+
+    .toggleBtn{ display: block; }
+
+    .menuOpen {
+        display: block;
+        left: 0%;
+        width: 100%;
+        position: absolute;
+        text-align: center;
+        line-height: 2;
+        top: var(--menu-height);
+        background-color: rgba(0, 0, 0, 0.8);
+        transform: translateX(menuOpen);
+        height: calc(100% - var(--menu-height));
+        transition: animate  0.3s ease-in-out; /* Adjust timing and easing as needed */
+        z-index: 10; /* Ensure menu is on top */
+    }
+    .menuOpen .ul {
+        display: block;
+        }
+}

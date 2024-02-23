@@ -1,0 +1,326 @@
+
+       
+        .h-text {
+            max-width: 650px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+        }
+        .h-text span {
+            letter-spacing: 5px;
+        }
+        .h-text h1 {
+            font-size: 3.5em;
+        }
+        .h-text a {
+            text-decoration: none;
+            background-color: green;
+            color: white;
+            padding: 10px 20px;
+            letter-spacing: 5px;
+        }
+        .h-text a:hover {
+            background: transparent;
+            border: 1px solid green;
+        }
+
+        /* Media Query for Responsive Layout */
+  @media screen and (max-width: 768px) {
+    .menu {
+      display: none;
+    }
+
+    .menu.active {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      background-color: #f5f5f5;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      padding: 10px;
+    }
+
+    .menu.active a {
+      margin: 8px 0;
+    }
+
+    .checkbtn {
+      display: block;
+      width: 30px;
+      height: 25px;
+      position: relative;
+      cursor: pointer;
+      margin-right: 20px;
+    }
+
+    .checkbtn span {
+      display: block;
+      position: absolute;
+      height: 2px;
+      width: 100%;
+      background-color: black;
+      border-radius: 2px;
+      opacity: 1;
+      left: 0;
+      transform: rotate(0);
+      transition: all 0.3s ease;
+      
+    }
+
+    .checkbtn span:nth-child(1) {
+      top: 0px;
+    }
+
+    .checkbtn span:nth-child(2),
+    .checkbtn span:nth-child(3) {
+      top: 8px;
+    }
+
+    .checkbtn span:nth-child(4) {
+      top: 16px;
+    }
+
+    .checkbtn.active span:nth-child(1) {
+      top: 8px;
+      transform: rotate(45deg);
+    }
+
+    .checkbtn.active span:nth-child(2) {
+      transform: rotate(-45deg);
+    }
+
+    .checkbtn.active span:nth-child(3) {
+      top: 8px;
+      transform: rotate(-45deg);
+    }
+
+    .checkbtn.active span:nth-child(4) {
+      top: 8px;
+      transform: rotate(45deg);
+    }
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+   /* Footer */
+    /* Footer */
+    body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            flex: 1;
+        }
+
+        .footer {
+            background-color: #F5F5F5;
+            color: #fefefe;
+            width: 100%;
+            margin-top: auto;
+            padding: 1.5rem;
+            box-sizing: border-box;
+        }
+
+        .footer .heading {
+            color: #333; /* Changed the title color */
+            max-width: 1010px;
+            width: 90%;
+            text-transform: uppercase;
+            margin: 0 auto;
+            margin-bottom: 3rem;
+            font-family: "Times New Roman", Times, serif; /* Changed the font to Times Roman */
+        }
+
+        .footer .content {
+            display: flex;
+            justify-content: space-evenly;
+            margin: 1.5rem;
+        }
+
+        .footer .content p {
+            margin-bottom: 1.3rem;
+        }
+
+        .footer .content a {
+            text-decoration: none;
+            color: #333; /* Changed the address color */
+        }
+
+        .footer .content a:hover {
+            border-bottom: 1px solid #971717;
+        }
+
+        .footer .content h4 {
+            margin-bottom: 1.3rem;
+            font-size: 19px;
+            color: #333; /* Changed the headings color */
+            font-family: "Times New Roman", Times, serif; /* Changed the font to Times Roman */
+        }
+
+        .footer .content i {
+            color: inherit; /* Display social icon logos with their real color */
+        }
+
+        footer {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: black; /* Changed the color of the footer text to black */
+        }
+
+        footer hr {
+            margin: 2rem 0;
+        }
+
+        .paragraph {
+            flex-basis: 30%;
+           
+        }
+
+        /* Add margin between sections */
+        .footer .content > * {
+            margin-right: 1.5rem;
+           color: darkorchid;
+        }
+
+        @media (max-width: 767px) {
+            .footer .content {
+                display: flex;
+                flex-direction: column;
+                font-size: 14px;
+            }
+
+            .footer {
+                padding: 1rem;
+            }
+
+            .paragraph {
+                flex-basis: 100%;
+            }
+        }
+
+        @media (min-width: 768px) and (max-width: 1024px) {
+            .footer .content,
+            .footer {
+                font-size: 14px;
+            }
+        }
+
+        @media (orientation: landscape) and (max-height: 500px) {
+            .footer {
+                position: unset;
+            }
+        }
+    
+    
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Times New Roman", Times, serif;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+    }
+    .about-section {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .about-section img {
+      max-width: 200px;
+      margin-right: 20px;
+    }
+    .about-section p {
+      text-align: center;
+      margin: 0;
+    }
+    .mission-section {
+      border: 2px solid #000;
+      padding: 80px;
+      background-color: rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .mission-section p {
+      text-align: left;
+      margin: 0;
+    }
+    .mission-section h2 {
+      text-align: center;
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+    .contact-section {
+      border: 1px solid #000;
+      padding: 40px;
+      background-color: #f9f9f9;
+      margin-bottom: 20px;
+    }
+    .contact-section label {
+      display: block;
+      margin-bottom: 10px;
+    }
+    .contact-section input[type="text"],
+    .contact-section input[type="email"],
+    .contact-section textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+    }
+    .contact-section input[type="submit"] {
+      background-color: #000;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+    .contact-section input[type="submit"]:hover {
+      background-color: #333;
+    }
+    .contact-section p {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    .map-container {
+      position: relative;
+      width: 100%;
+      height: 0;
+      padding-bottom: 56.25%; /* 16:9 aspect ratio (change this value as needed) */
+    }
+    .map-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }

@@ -1,0 +1,49 @@
+.cards {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 3rem;
+    padding-bottom: 4rem;
+}
+
+.card {
+    position: relative;
+    height: 500px;
+    width: 350px;
+    border: 1px solid;
+    padding: 10px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 0px 6px 2px #888888;
+}
+
+.card ul { margin-left:1rem; }
+
+.image { height: 100px; margin: 2px; }
+
+.heading { height: 2rem; overflow: hidden; }
+
+.content { height: 200px; overflow: hidden; position: relative; }
+
+.overlay { position: absolute; bottom: 0; width: 100%; z-index: 10; height: 1.5rem;
+    background: linear-gradient(0deg, #D6DBDD 70%, #D6DBDD 66%, #00000000 100%);
+}
+
+.buttonDiv { position: absolute; bottom: 1rem; left: 10px; }
+
+.button { padding: 8px 10px; border: 1px solid black; border-radius: 8px; font-size: 1rem; transition:ease .3s; cursor: pointer;}
+
+.button:hover { background-color: #010304; color: #6AD4EE; font-weight: 700; font-size: 1.125rem; }
+
+@media screen and (max-width:1180px) {
+    .cards { grid-template-columns: auto auto; }
+}
+
+@media screen and (max-width:768px) {
+    .cards { gap: 1rem; }
+}
+@media screen and (max-width:740px) {
+    .cards { grid-template-columns: auto; }
+}
+@media screen and (max-width:540px) {
+    .card { height: 400px; width: 90%; margin: auto; }
+}
