@@ -19,7 +19,7 @@ export async function PUT (req, content) {
 
     const id = content.params.blogs;
     const filter = {_id:id};
-    console.log(filter);
+    // console.log(filter);
 
     try {
         // console.log(filter);

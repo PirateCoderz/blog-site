@@ -16,7 +16,7 @@ const BlogCards = async () => {
         <div className={style.cards}>
             {data.map((n) => {
                 return (
-                    <Card key={n._id} id={n._id} image={n.image} heading={n.heading} content={n.content} />
+                    <Card key={n._id} id={n._id} featureImg={n.featureImg} heading={n.heading} content={n.content} />
                 )
             })
             }

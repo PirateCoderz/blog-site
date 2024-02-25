@@ -10,6 +10,7 @@ import axios from "axios";
 import ImageKit from "imagekit";
 
 import { useState, useEffect, useRef } from 'react';
+import { useRouter } from 'next/navigation';
 
 const imageKit = new ImageKit({
     publicKey: process.env.publicKey,
@@ -21,6 +22,7 @@ const JoditComponent = dynamic(() => import("@/Components/Jodit/Jodit"), { ssr: 
 
 const UpdateBlog = ({ params }) => {
 
+    const route = useRouter();
     const id = params;
     let updateData;
 
@@ -38,8 +40,8 @@ const UpdateBlog = ({ params }) => {
             updateData = response.data.result;
             setHeading(updateData.heading);
             setJoditContent(updateData.content);
-            setImages(updateData.image)
-            console.log(updateData)
+            setImages(updateData.featureImg)
+            // console.log(updateData)
         }).catch((err) => {
             console.log(err);
         });
@@ -89,7 +91,7 @@ const UpdateBlog = ({ params }) => {
             console.error("Error reading images:", error);
         } finally {
             // setLoading(false); // Set the loading state to false after all images are processed
-            console.log("Images are uploaded")
+            // console.log("Images are uploaded")
         }
 
         // Clear the file input after image selection
@@ -114,7 +116,7 @@ const UpdateBlog = ({ params }) => {
                         img_id: response.fileId,
                         img_url: response.url,
                     }];
-                    console.log(Cloudimages);
+                    // console.log(Cloudimages);
                 }
             }
             if (!response) {
@@ -139,15 +141,16 @@ const UpdateBlog = ({ params }) => {
         const content = Joditcontent;
         const image = images;
 
-        await axios.put("/api/blogs/" + id, { heading, content, image })
-            .then((response) => {
-                // console.log(response);
-                console.log("Blog Data is Sent Successfully to Route");
-                // imageStoreHandler();
-                alert("Blog is Uploaded Successfully");
-            }).catch((err) => {
-                console.log(err);
-            });
+        await axios.put("/api/blogs/" + id, { heading, content, image }).then((response) => {
+            // console.log(response);
+            // console.log("Blog Data is Sent Successfully to Route");
+            // imageStoreHandler();
+            alert("Blog is Uploaded Successfully");
+            route.replace('/blogs/' + id);
+        }).catch((err) => {
+            console.log(err.message);
+        });
+
     };
 
     const clearHandler = () => {

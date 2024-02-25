@@ -20,7 +20,7 @@ const Blog = async (n) => {
             <h1 className={styles.heading}>{data.heading}</h1> 
             <UpdateBtn id={id} />
             {/* <button className={styles.updatebtn} id={id}>Update</button> */}
-            <div className={styles.imageDiv}><Image src={`${data.image}`} title={data.image} height={500} width={1000} alt={data.image} /></div>
+            <div className={styles.imageDiv}><Image src={`${data.featureImg}`} title={data.featureImg} height={500} width={1000} alt={data.featureImg} /></div>
             <div className={styles.contentDiv}>{HTMLReactParser(data.content)}</div>
         </div>
      );

@@ -29,7 +29,8 @@ export async function POST(req) {
     DB_Connect();
     try {
         const payload = await req.json();
-        const blogData = await BlogModel.create(payload);
+        let blogData = new BlogModel(payload);
+        // const blogData = await BlogModel.create(payload);
         const data = await blogData.save();
         return NextResponse.json({ result: data, success: true });
     } catch (err) {

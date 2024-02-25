@@ -15,11 +15,11 @@ const HeroSection = async () => {
 
     {data.map((n) => {
       return (
-        <section className='item'>
+        <section key={n._id} className='item'>
         <div className="container">
           <div className="row">
             <div className="image-center col-md-6 text-center py-4">
-              <Image src={n.image} width={800} height={400} alt={n.heading} />
+              <Image src={n.featureImg} width={800} height={400} alt={n.heading} />
             </div>
             <div className="col-md-6">
               <div className="h-text">

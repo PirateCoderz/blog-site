@@ -7,7 +7,7 @@
 
 .blogPage { padding-left: 1rem; };
 
-.heading { padding: 30px 0; font-size: 3rem; padding-left: 2rem;}
+.heading { margin: 30px; font-size: 3rem; padding-left: 2rem; }
 
 .imageDiv { padding-bottom: 2rem; display: flex; justify-content: center;}
 

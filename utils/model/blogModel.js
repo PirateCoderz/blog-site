@@ -10,8 +10,9 @@ const imgSchema = new mongoose.Schema({
 
 const blogSchema = new mongoose.Schema({
     "heading":{type:String},
-    "content": {type:String, require:true},
-    "imagedata" : {type:imgSchema, require: true}
+    "content": {type:String, reqire: true},
+    "featureImg" : {type: String, trim: true},
+    "imagedata" : {type:imgSchema, require: true},
 })
 
 export const BlogModel = mongoose.models.blogs || mongoose.model("blogs", blogSchema);

@@ -27,14 +27,25 @@ const BlogForm = () => {
   const [data, setData] = useState({
     heading: '',
   });
-
+  let blogId = null;
   const fileInputRef = useRef(null);
 
   const router = useRouter();
 
+  const updateBlogImages = async(Cloudimages) => {
+    const imagedata = Cloudimages[0];
+    const featureImg = imagedata.img_url;
+    await axios.put('http://localhost:3000/api/blogs/' +blogId , {featureImg, imagedata}).then((res) => {
+      // console.log("Image data is stored in mongo");
+    }).catch((err) => {
+      console.log("error while storing image data in mongo");
+      console.log(err.message);
+    });
+  }
+
   const imageStoreHandler = async () => {
     // console.log("Images Store Handler is Running");
-    let Cloudimages = []
+    let Cloudimages = [];
 
     for (const obj of imagestoshow) {
       const file = obj.url;
@@ -50,8 +61,9 @@ const BlogForm = () => {
             img_id: response.fileId,
             img_url: response.url,
         }];
-          console.log(Cloudimages);
+          // console.log(Cloudimages);
         }
+        await updateBlogImages(Cloudimages);
       }
       if (!response) {
         console.log("error in uploding imgs");
@@ -61,6 +73,7 @@ const BlogForm = () => {
     if (Cloudimages.length > 0) {
       setImagesstored(prev => [Cloudimages[0]]);
     }
+
   }
 
   const submitHandler = async (e) => {
@@ -71,18 +84,30 @@ const BlogForm = () => {
       return
     }
 
-    // const heading = data.heading,
-    //   content = Joditcontent,
-    //   imagesObj = imagesstored[0];
+    const heading = data.heading,
+      content = Joditcontent,
+      featureImg = imagesstored[0];
+      
+      // console.log("Heading " + heading);
+      // console.log("Joditcontent ");
+      // console.log(content)
+      // console.log(featureImg);
 
-      await axios.put("/api/blogs",{heading, content})
-      .then((result) => {
-        // console.log(result);
-        // console.log("Blog Data is Sent Successfully to Route");
-        alert("Blog is Uploaded Successfully");
+      await axios.post("http://localhost:3000/api/blogs",{heading, content})
+      .then((response) => {
+        // console.log(response);
+        console.log("Blog Data is Sent Successfully to Route");
+        // console.log(response.data.result._id)
+        blogId = response.data.result._id;
         imageStoreHandler();
+
+
+        alert("Blog is Uploaded Successfully");
+        router.replace('/blogs')
       }).catch((err) => {
-        console.log(err);
+
+        console.log("Error while sending data to api");
+        console.log(err.message);
       });
   }
 
@@ -142,12 +167,15 @@ const BlogForm = () => {
       }
 
       await Promise.all(promises); // Wait for all file reading operations to complete
+
+      console.log(promises);
     } catch (error) {
       // Handle any potential errors
       console.error("Error reading images:", error);
+
     } finally {
       // setLoading(false); // Set the loading state to false after all images are processed
-      console.log("Images are uploaded")
+      // console.log("Images are uploaded");
     }
 
     // Clear the file input after image selection
