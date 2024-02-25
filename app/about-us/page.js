@@ -31,7 +31,7 @@ const Page = () => {
       communities.
     </p>
   </div>
-  <div className="contact-section">
+  <div className="contact-section" id='contact-us'>
     <h2>Contact Us</h2>
     <form>
       <label htmlFor="name">Name:</label>

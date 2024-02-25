@@ -4,6 +4,7 @@ import Image from "next/image";
 import NavbarPage from "./NavbarPage";
 import style from './NavbarPage.module.css';
 import { useState } from "react";
+import Link from "next/link";
 
 const Navbar = () => {
 
@@ -42,7 +43,7 @@ const Navbar = () => {
 
             <div className={style.callOption}>
                 <span className={style.callOptionText}>Call For Appointment</span>
-                <span>+1 3333 111 444</span>
+                <span className={style.callOptionText}><Link href={'tel:+923462076541'}>+92 346 2076541</Link></span>
             </div>
         </header>
     );

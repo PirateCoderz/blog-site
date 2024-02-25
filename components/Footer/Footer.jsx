@@ -6,7 +6,7 @@ const Footer = () => {
         < footer className="footer" >
             <div className="heading">
                 <h2>
-                    WH<sup>Tribute</sup>
+                    Pirate<sup>Blogs</sup>
                 </h2>
             </div>
             <div className="content">
@@ -21,12 +21,12 @@ const Footer = () => {
                 </div>
                 <div className="social-media">
                     <h4>Social</h4>
-                    <p>
-                        <a href="https://pk.linkedin.com">
+                    {/* <p>
+                        <a href="https://linkedin.com/in/piratecoder">
                             <i className="fab fa-linkedin" style={{ color: "#0077B5" }} />{" "}
                             Linkedin
                         </a>
-                    </p>
+                    </p> */}
                     <p>
                         <a href="https://twitter.com/">
                             <i className="fab fa-twitter" style={{ color: "#1DA1F2" }} />{" "}
@@ -34,7 +34,7 @@ const Footer = () => {
                         </a>
                     </p>
                     <p>
-                        <a href="https://github.com">
+                        <a href="https://github.com/piratecoderz">
                             <i className="fab fa-github" style={{ color: "#333" }} /> Github
                         </a>
                     </p>
@@ -45,7 +45,7 @@ const Footer = () => {
                         </a>
                     </p>
                     <p>
-                        <a href="https://www.instagram.com">
+                        <a href="https://www.instagram.com/numliancoder">
                             <i className="fab fa-instagram" style={{ color: "#C13584" }} />{" "}
                             Instagram
                         </a>
@@ -60,7 +60,7 @@ const Footer = () => {
                         <a href="/about-us">About Us</a>
                     </p>
                     <p>
-                        <a href="/conact-us">Contact Us</a>
+                        <a href="/about-us#conact-us">Contact Us</a>
                     </p>
                     <p>
                         <a href="/blogs">Blogs</a>

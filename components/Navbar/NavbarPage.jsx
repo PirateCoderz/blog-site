@@ -20,7 +20,7 @@ const NavbarPage = ({ isOpen, toggleMenu }) => {
                     <Link href={'/blogs'} >Blogs</Link>
                 </li>
                 <li>
-                    <Link href={'/contact-us'}>Contact Us</Link>
+                    <Link href={'/about-us#contact-us'}>Contact Us</Link>
                 </li>
             </ul>
         </nav>

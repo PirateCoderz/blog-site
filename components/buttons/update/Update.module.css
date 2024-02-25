@@ -1,8 +1,10 @@
 .updatebtn {
-    float: right;
     background-color: aqua;
-    padding: 10px;
+    padding: 12px;
     text-transform: uppercase;
     margin-right: 30px;
-    margin-top: -10px;
+    float: right;
+    position: absolute;
+    right: 0;
+    top: 20px;
 }

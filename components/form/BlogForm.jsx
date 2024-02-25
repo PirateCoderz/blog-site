@@ -37,6 +37,7 @@ const BlogForm = () => {
     const featureImg = imagedata.img_url;
     await axios.put('http://localhost:3000/api/blogs/' +blogId , {featureImg, imagedata}).then((res) => {
       // console.log("Image data is stored in mongo");
+      router.replace('/blogs')
     }).catch((err) => {
       console.log("error while storing image data in mongo");
       console.log(err.message);
@@ -103,7 +104,6 @@ const BlogForm = () => {
 
 
         alert("Blog is Uploaded Successfully");
-        router.replace('/blogs')
       }).catch((err) => {
 
         console.log("Error while sending data to api");

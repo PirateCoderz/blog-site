@@ -6,14 +6,20 @@
 }
 
 .blogPage { padding-left: 1rem; };
+.blogPage h1 {margin: 30px; font-size: 3rem; padding-left: 2rem;}
 
-.heading { margin: 30px; font-size: 3rem; padding-left: 2rem; }
+.heading { margin: 10px;
+    font-size: 3rem;
+    padding-left: 2rem;
+    text-align: center;}
 
 .imageDiv { padding-bottom: 2rem; display: flex; justify-content: center;}
 
+.contentDiv  { padding-bottom: 2rem;}
 .contentDiv ul, .blogPage { padding-left: 1.5rem;};
 
-.blogPage > h1 { float: left; padding: 20px;}
+.contentDiv h1, .contentDiv h2 { padding: 30px;}
+.blogPage > h2 { float: left; padding: 20px;}
 .contentDiv h1, .contentDiv h2, .contentDiv h3 {font-size: 200%;};
 
 .contentDiv p, .contentDiv ul { font-size: 150%;}

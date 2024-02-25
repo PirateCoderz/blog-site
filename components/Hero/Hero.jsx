@@ -19,7 +19,7 @@ const HeroSection = async () => {
         <div className="container">
           <div className="row">
             <div className="image-center col-md-6 text-center py-4">
-              <Image src={n.featureImg} width={800} height={400} alt={n.heading} />
+              <Image src={n.featureImg} title={n.heading} width={800} height={400} alt={n.heading} />
             </div>
             <div className="col-md-6">
               <div className="h-text">

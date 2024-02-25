@@ -7,3 +7,9 @@ const Page = () => {
 }
  
 export default Page;
+
+export function generateMetadata ({params}) {
+    return {
+        title: "Create Blogs | Pirate Blogs"
+    }
+}
