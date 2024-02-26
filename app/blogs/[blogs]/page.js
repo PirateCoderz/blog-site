@@ -11,6 +11,7 @@ const Blog = async (n) => {
 
     await axios.get("http://localhost:3000/api/blogs/" + id).then((response) => {
         data = response.data.result;
+        metaTitle = data.heading + " | Pirate Blogs";
         // console.log(data);
     }).catch((err) => {
         console.log(err.message);
@@ -32,14 +33,7 @@ export default Blog;
 
 
 
-export async function generateMetadata ({params}) {
-    
+export function generateMetadata ({params}) {
 
-    await axios.get("http://localhost:3000/api/blogs/" + params.blogs).then((response) => {
-        const metaTitle = response.data.result.heading;
-    }).catch((err) => {
-        console.log("Error in setting Title")
-        console.log(err.message);
-    });
-    return metaTitle;
+    return {title:metaTitle};
 }

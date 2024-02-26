@@ -1,4 +1,3 @@
-// import Image from 'next/image';
 import axios from 'axios';
 import './styling.css';
 import Link from 'next/link';
@@ -35,46 +34,6 @@ const HeroSection = async () => {
       </section>
       )
     })}
-{/* 
-
-    <section className='item'>
-      <div className="container">
-        <div className="row">
-          <div className="col-md-6 text-center py-4">
-            <img src="ig/AS.jpg" alt="Afia Siddique" />
-          </div>
-          <div className="col-md-6">
-            <div className="h-text">
-              <span>Dr Aafia Siddiqui</span>
-              <h1> Brilliant Controversial Enigmatic.</h1>
-              <a href="DR AFIA SIDDIQUE.html" className="btn btn-primary">
-                READ MORE
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-    <section className='item'>
-      <div className="container">
-        <div className="row">
-          <div className="col-md-6 text-center py-4">
-            <img src="ig/mh.jpg" alt="Sepoy Maqbool Hussain " />
-          </div>
-          <div className="col-md-6">
-            <div className="h-text">
-              <span>Sepoy Maqbool Hussain</span>
-              <h1> Unwavering courage resilience and sacrifice.</h1>
-              <a href="Sepoy Maqbool Hussain.html" className="btn btn-primary">
-                READ MORE
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> */}
 
   </div>
   );

@@ -47,10 +47,23 @@ const UpdateBlog = ({ params }) => {
         });
     };
 
+    const updateBlogImages = async (Cloudimages) => {
+        const imagedata = Cloudimages[0];
+        const featureImg = imagedata.img_url;
+        await axios.put('http://localhost:3000/api/blogs/' + blogId, { featureImg, imagedata }).then((res) => {
+            // console.log("Image data is stored in mongo");
+            router.replace('/blogs')
+        }).catch((err) => {
+            console.log("error while storing image data in mongo");
+            console.log(err.message);
+        });
+    }
+
     const ImagePickedHandler = async (e) => {
         const files = e.target.files;
         if (files.length > 20 || imagestoshow.length >= 20) {
-            alert('Maximum 20 images are allowed');
+            alert('Maximum 20 images are allowed')
+
             return;
         }
 
@@ -63,7 +76,7 @@ const UpdateBlog = ({ params }) => {
 
                 // Check if the size of the current image exceeds the limit (4MB)
                 if (file.size > 6 * 1024 * 1024) {
-                    alert('Image size should not exceed 6MB.');
+                    alert('Image size should not exceed 6MB.')
                     continue;
                 }
 
@@ -86,12 +99,15 @@ const UpdateBlog = ({ params }) => {
             }
 
             await Promise.all(promises); // Wait for all file reading operations to complete
+
+            console.log(promises);
         } catch (error) {
             // Handle any potential errors
             console.error("Error reading images:", error);
+
         } finally {
             // setLoading(false); // Set the loading state to false after all images are processed
-            // console.log("Images are uploaded")
+            // console.log("Images are uploaded");
         }
 
         // Clear the file input after image selection

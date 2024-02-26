@@ -7,7 +7,7 @@ import Link from 'next/link';
 const Card = ({ id, featureImg, heading, content }) => {
     return (
         <div className={style.card}>
-            <div><Image src={`${featureImg}`} width={330} height={200} alt={featureImg} /></div>
+            <div><Image src={featureImg} width={330} height={200} alt={featureImg} /></div>
             <div className={style.heading}><h2>{heading}</h2></div>
             <div className={style.content}>
                 {HTMLReactParser(content)}

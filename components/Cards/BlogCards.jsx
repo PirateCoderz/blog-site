@@ -4,7 +4,6 @@ import style from './Card.module.css';
 
 const BlogCards = async () => {
 
-    // await axios.get()
     let data;
      await axios.get('http://localhost:3000/api/blogs').then((response) => {
         data = response.data.result;

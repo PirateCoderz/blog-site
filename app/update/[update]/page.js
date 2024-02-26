@@ -7,3 +7,10 @@ const Page = (params) => {
 }
  
 export default Page;
+
+
+export function generateMetadata ({params}) {
+    return {
+        title: "Update Blog | Pirate Blogs"
+    };
+  }

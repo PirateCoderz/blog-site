@@ -181,7 +181,6 @@ const BlogForm = () => {
     // Clear the file input after image selection
     fileInputRef.current.value = null;
   };
-  // console.log(imagestoshow);
 
   return (
     <div className={style.main}>
