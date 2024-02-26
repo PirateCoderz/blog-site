@@ -8,6 +8,6 @@ export default Page;
 
 export function generateMetadata ({params}) {
     return {
-        title: "Update Blog | Pirate Blogs"
+        title: "Update Blog | WH Tribute"
     };
   }

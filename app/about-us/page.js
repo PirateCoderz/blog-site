@@ -6,7 +6,7 @@ const Page = () => {
       <h1>About Us</h1>
       <div className="about-section">
         <p>
-          Welcome to Pirate Blogs, a dedicated platform paying tribute to some of the
+          Welcome to WH Tribute, a dedicated platform paying tribute to some of the
           most influential figures in the history of our nation. We honor the
           remarkable lives and contributions of great leaders such as Quaid-e-Azam
           Muhammad Ali Jinnah, Allama Iqbal, and many others who played instrumental

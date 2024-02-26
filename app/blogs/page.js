@@ -15,6 +15,6 @@ export default Blogs;
 
 export function generateMetadata () {
     return {
-        title: "Blogs | Pirate Blogs"
+        title: "Blogs | WH Tribute"
     };
 }

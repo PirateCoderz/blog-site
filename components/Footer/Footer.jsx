@@ -6,13 +6,13 @@ const Footer = () => {
         < footer className="footer" >
             <div className="heading">
                 <h2>
-                    Pirate<sup>Blogs</sup>
+                    WH<sup>Tribute</sup>
                 </h2>
             </div>
             <div className="content">
                 <div className="paragraph">
                     <p>
-                        Welcome to our Blog website, a space dedicated to honoring and
+                        Welcome to our Tribute website, a space dedicated to honoring and
                         celebrating the lives of remarkable individuals who have left an
                         indelible mark on the world. Here, we pay tribute to the extraordinary
                         achievements, enduring legacies, and profound impact of those who have

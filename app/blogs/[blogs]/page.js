@@ -5,13 +5,20 @@ import axios from "axios";
 import UpdateBtn from "@/components/buttons/update/Update";
 
 let metaTitle;
+
+
+export function generateMetadata ({params}) {
+
+    return {title:metaTitle};
+}
+
 const Blog = async (n) => {
     const id = n.params.blogs;
     let data;
 
     await axios.get("http://localhost:3000/api/blogs/" + id).then((response) => {
         data = response.data.result;
-        metaTitle = data.heading + " | Pirate Blogs";
+        metaTitle = data.heading + " | WH Tribute";
         // console.log(data);
     }).catch((err) => {
         console.log(err.message);
@@ -30,10 +37,3 @@ const Blog = async (n) => {
 }
 
 export default Blog;
-
-
-
-export function generateMetadata ({params}) {
-
-    return {title:metaTitle};
-}
