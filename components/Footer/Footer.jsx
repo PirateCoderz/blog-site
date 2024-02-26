@@ -12,7 +12,7 @@ const Footer = () => {
             <div className="content">
                 <div className="paragraph">
                     <p>
-                        Welcome to our tribute website, a space dedicated to honoring and
+                        Welcome to our Blog website, a space dedicated to honoring and
                         celebrating the lives of remarkable individuals who have left an
                         indelible mark on the world. Here, we pay tribute to the extraordinary
                         achievements, enduring legacies, and profound impact of those who have

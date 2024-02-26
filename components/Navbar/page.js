@@ -15,7 +15,7 @@ const Navbar = () => {
 
     return (
         <header className={style.header}>
-            <Image src={'./main.jpg'} width={100} height={50} priority="true" alt="Logo Image" />
+            <Image src={'/main.jpg'} width={100} height={50} priority="true" alt="Logo Image" />
 
             <div className={style.toggleBtn}>
                 <svg onClick={toggleMenu} className={isOpen ? style.svgOpen : style.svgClosed}

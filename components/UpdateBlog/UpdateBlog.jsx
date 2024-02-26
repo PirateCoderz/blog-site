@@ -33,7 +33,7 @@ const UpdateBlog = ({ params }) => {
 
     useEffect(() => {
         fetchData();
-    }, []);
+    });
 
     const fetchData = async () => {
         await axios.get("http://localhost:3000/api/blogs/" + id).then((response) => {

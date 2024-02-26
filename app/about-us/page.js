@@ -5,9 +5,9 @@ const Page = () => {
         <div className="container">
   <h1>About Us</h1>
   <div className="about-section">
-    <img src="ig/about.jpg" alt="Website Logo" />
+    {/* <Image src="./ig/about.jpg" alt="Website Logo" /> */}
     <p>
-      Welcome to WH Tribute, a dedicated platform paying tribute to some of the
+      Welcome to Pirate Blogs, a dedicated platform paying tribute to some of the
       most influential figures in the history of our nation. We honor the
       remarkable lives and contributions of great leaders such as Quaid-e-Azam
       Muhammad Ali Jinnah, Allama Iqbal, and many others who played instrumental
