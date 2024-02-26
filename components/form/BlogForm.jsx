@@ -32,10 +32,10 @@ const BlogForm = () => {
 
   const router = useRouter();
 
-  const updateBlogImages = async(Cloudimages) => {
+  const updateBlogImages = async (Cloudimages) => {
     const imagedata = Cloudimages[0];
     const featureImg = imagedata.img_url;
-    await axios.put('http://localhost:3000/api/blogs/' +blogId , {featureImg, imagedata}).then((res) => {
+    await axios.put('http://localhost:3000/api/blogs/' + blogId, { featureImg, imagedata }).then((res) => {
       // console.log("Image data is stored in mongo");
       alert("Blog is Uploaded Successfully");
 
@@ -63,7 +63,7 @@ const BlogForm = () => {
           Cloudimages = [{
             img_id: response.fileId,
             img_url: response.url,
-        }];
+          }];
           // console.log(Cloudimages);
         }
         await updateBlogImages(Cloudimages);
@@ -90,13 +90,13 @@ const BlogForm = () => {
     const heading = data.heading,
       content = Joditcontent,
       featureImg = imagesstored[0];
-      
-      // console.log("Heading " + heading);
-      // console.log("Joditcontent ");
-      // console.log(content)
-      // console.log(featureImg);
 
-      await axios.post("http://localhost:3000/api/blogs",{heading, content})
+    // console.log("Heading " + heading);
+    // console.log("Joditcontent ");
+    // console.log(content)
+    // console.log(featureImg);
+
+    await axios.post("http://localhost:3000/api/blogs", { heading, content })
       .then((response) => {
         // console.log(response);
         console.log("Blog Data is Sent Successfully to Route");
@@ -192,11 +192,11 @@ const BlogForm = () => {
           <label htmlFor="imgInput">Upload Featured Image</label>
           <input ref={fileInputRef} type="file" name="imgInput" onChange={ImagePickedHandler} id="imageInput" style={{ display: 'inline', width: 'auto', marginLeft: 20 }} />
           {imagestoshow.length > 0 ? <>
-          <Image src={imagestoshow[0].url} priority={false} width={100} height={80} alt={imagestoshow[0].filename} />
+            <Image src={imagestoshow[0].url} priority={false} width={100} height={80} alt={imagestoshow[0].filename} />
           </> : null}
-        
-         <JoditComponent Joditcontent={Joditcontent} setJoditContent={setJoditContent} />
-        
+
+          <JoditComponent Joditcontent={Joditcontent} setJoditContent={setJoditContent} />
+
           <div className={formstyle.submitDiv}>
             <button className={formstyle.submit}>Add Blog</button>
             <input type='reset' className={formstyle.submit} onClick={clearHandler} value="Clear Data" />
