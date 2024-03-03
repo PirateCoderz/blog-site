@@ -30,7 +30,8 @@
 .svgClosed { display: none;}
 
 
-.callOption { display: flex; flex-direction: column;}
+.extraOption { display: flex; flex-direction: row; gap: 10px;}
+.callOption { display: flex; flex-direction: column; }
 .callOptionText { font-size: 0.75rem; color: #7efced;}
 
 

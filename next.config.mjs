@@ -27,7 +27,10 @@ const nextConfig = {
 
         urlEndPoint: 'https://ik.imagekit.io/8lpztmifb/',
         publicKey: 'public_JTAgYImkR0BrnLBiH8LguJ7FMPw=',
-        privateKey: "private_6PG0VcYdQ3bSfma5w4QQYfRtYX4="
+        privateKey: "private_6PG0VcYdQ3bSfma5w4QQYfRtYX4=",
+
+        JWT_TOKEN: 'PeakTokenData33'
+
 
     }
 };

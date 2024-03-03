@@ -27,6 +27,7 @@ const BlogForm = () => {
   const [data, setData] = useState({
     heading: '',
   });
+  
   let blogId = null;
   const fileInputRef = useRef(null);
 

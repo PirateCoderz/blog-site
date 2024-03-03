@@ -24,6 +24,8 @@ const Blog = async (n) => {
         console.log(err.message);
     });
 
+    
+
     return (
         <div className={'blogPage'}>
             <div style={{position:"relative"}} >

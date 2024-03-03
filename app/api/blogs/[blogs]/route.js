@@ -35,3 +35,17 @@ export async function PUT (req, content) {
     }
     
 }
+
+export async function DELETE (req, content) {
+    DB_Connect();
+
+    try {
+        const id = content.params.blogs;
+        const record = {_id:id};
+        const result = await BlogModel.deleteOne(record);
+    } catch (error) {
+        return NextResponse.json({result: error, success:false} , {status:400});
+    }
+
+    return NextResponse.json({result, success:true} , {status:200});
+}

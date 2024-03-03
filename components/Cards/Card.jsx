@@ -2,6 +2,7 @@ import HTMLReactParser from 'html-react-parser';
 import style from './Card.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
+import DeleteBlog from '../buttons/delete/DeleteBlog';
 
 
 const Card = ({ id, featureImg, heading, content }) => {
@@ -13,7 +14,10 @@ const Card = ({ id, featureImg, heading, content }) => {
                 {HTMLReactParser(content)}
                 <div className={style.overlay}></div>
             </div>
-            <div className={style.buttonDiv}><Link href={"/blogs/" + id} className={style.button}>Read More</Link></div>
+            <div className={style.buttonDiv}>
+                <Link href={"/blogs/" + id} className={style.button}>Read More</Link>
+                <DeleteBlog id={id} />
+                </div>
         </div>
     );
 }

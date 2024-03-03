@@ -1,11 +1,11 @@
 import AddBlogs from "@/components/AddBlogs/AddBlog";
 
 const Page = () => {
-    return ( 
+    return (
         <AddBlogs />
      );
 }
- 
+
 export default Page;
 
 export function generateMetadata ({params}) {
