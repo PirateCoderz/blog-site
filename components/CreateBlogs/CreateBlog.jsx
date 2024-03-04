@@ -9,14 +9,10 @@ const CreateBlog = () => {
     const editor = useRef(null);
     const [content, setContent] = useState('');
 
-
-
-
     return (
         <div style={{ background: '#fff', height:'90vh' }}>
             <h1 className={style.heading} >Create Your Blog Here</h1>
             
-
             <JoditEditor
                 ref={editor}
                 value={content}

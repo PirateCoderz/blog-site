@@ -11,6 +11,7 @@ const imgSchema = new mongoose.Schema({
 const blogSchema = new mongoose.Schema({
     "heading":{type:String},
     "content": {type:String, reqire: true},
+    "slug": {type:String, reqire: true, unique: true},
     "featureImg" : {type: String, trim: true},
     "imagedata" : {type:imgSchema, require: true},
 })

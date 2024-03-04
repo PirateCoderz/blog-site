@@ -7,7 +7,7 @@ const middleware = (request) => {
     // console.log(path)
 
     const isPublicPaths = path === '/login' || path === '/signup';
-    const isAdminPaths = path === '/create-blog' || path === '/browse-st';   
+    const isAdminPaths = path === '/create-blog';   
     const isMainPath = path === '/';
 
     const isDynamicPaths = request.nextUrl.pathname.startsWith('/update');
