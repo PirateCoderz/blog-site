@@ -1,4 +1,4 @@
-import BlogForm from "../form/BlogForm";
+import BlogForm from "../BlogForm/BlogForm";
 
 const AddBlogs = () => {
     return ( 

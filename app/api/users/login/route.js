@@ -46,9 +46,10 @@ export async function POST(req) {
         // console.log(token)
         const response = NextResponse.json({message: "Login Successful", success: true} , {status: 200});
 
-        response.cookies.set("token" , token, {
-            httpOnly: true
-        });
+        localStorage.setItem('token', token);
+        // response.cookies.set("token" , token, {
+        //     httpOnly: true
+        // });
 
         return response;
 

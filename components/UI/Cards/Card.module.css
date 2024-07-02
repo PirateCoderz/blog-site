@@ -18,7 +18,8 @@
 
 .card ul { margin-left:1rem; }
 
-.image { height: 100px; margin: 2px; }
+.image { height: 100px; margin: 2px; width: auto; }
+.single_image {height: 190px; width: 100%;}
 
 .heading { height: 2rem; overflow: hidden; }
 

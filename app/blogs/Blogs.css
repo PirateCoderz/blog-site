@@ -6,9 +6,15 @@
 }
 
 .blogPage { padding-left: 1rem; };
+
+#searchdiv {
+    width: 500px;
+    display: flex;
+    flex-direction: row;
+}
 .blogPage h1 {margin: 30px; font-size: 3rem; padding-left: 2rem;}
 
-.heading { margin: 10px;
+.heading, #heading { margin: 10px;
     font-size: 3rem;
     padding-left: 2rem;
     text-align: center;}

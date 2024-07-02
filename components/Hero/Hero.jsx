@@ -24,7 +24,7 @@ const HeroSection = async () => {
                   <div className="h-text">
                     {/* <span>{n.heading}</span> */}
                     <h1 className='margin'>{n.heading}</h1>
-                    <Link href={'/blogs/' + n._id} className="btn btn-primary">
+                    <Link href={'/blogs/' + n.slug} className="btn btn-primary">
                       READ MORE
                     </Link>
                   </div>

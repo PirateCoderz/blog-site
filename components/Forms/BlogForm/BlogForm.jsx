@@ -84,8 +84,10 @@ const BlogForm = () => {
     e.preventDefault();
 
     if (data.heading == "" || Joditcontent == "") {
+
+      if(data.heading == "") alert("Heading is not here");
       alert("Some Data Fields are Empty. Fill All of them...");
-      return
+      return;
     }
 
     const heading = data.heading,
@@ -94,7 +96,7 @@ const BlogForm = () => {
 
     // console.log("Heading " + heading);
     // console.log("Joditcontent ");
-    // console.log(content)
+    // console.log(content);
     // console.log(featureImg);
 
     await axios.post("http://localhost:3000/api/blogs", { heading, content })

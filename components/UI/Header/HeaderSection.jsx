@@ -2,9 +2,9 @@ import Navbar from "../Navbar/page";
 
 const HeaderSection = () => {
     return ( 
-        <header>
+        <>
             <Navbar />
-        </header>
+        </>
      );
 }
  

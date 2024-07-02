@@ -1,21 +1,22 @@
 'use client'
 import JoditEditor from "jodit-react";
-import { useRef, useState } from "react";
+import { useRef } from "react";
 
 
-const JoditComponent = ({ setJoditContent, Joditcontent}) => {
-    const editor = useRef(null);
+const JoditComponent = ({ setJoditContent, Joditcontent }) => {
+    const editor = useRef(Joditcontent);
+    // console.log(editor.current);
     // const [Joditcontent, setJoditContent] = useState(null);
 
-    return ( 
+    return (
         <JoditEditor
             ref={editor}
             // className={style.joditInput}
             style={{ color: '#fff' }}
             value={Joditcontent}
-            onChange={newContent => setJoditContent(newContent)}
-          />
-     );
+            onChange={setJoditContent(newContent => newContent)}
+        />
+    );
 }
- 
+
 export default JoditComponent;
