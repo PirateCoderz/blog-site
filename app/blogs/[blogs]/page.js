@@ -6,17 +6,15 @@ import UpdateBtn from "@/components/buttons/update/Update";
 
 let metaTitle;
 
-
-export function generateMetadata ({params}) {
-
-    return {title:metaTitle};
+export function generateMetadata({ params }) {
+    return { title: metaTitle };
 }
 
 const Blog = async (n) => {
-    const id = n.params.blogs;
+    const slug = n.params.blogs;
     let data;
 
-    await axios.get("http://localhost:3000/api/blogs/" + id).then((response) => {
+    await axios.get("http://localhost:3000/api/blogs/" + slug).then((response) => {
         data = response.data.result;
         metaTitle = data.heading + " | WH Tribute";
         // console.log(data);
@@ -24,15 +22,13 @@ const Blog = async (n) => {
         console.log(err.message);
     });
 
-    
-
     return (
         <div className={'blogPage'}>
-            <div style={{position:"relative"}} >
+            <div style={{ position: "relative" }} >
                 <h1 className={'heading'}>{data.heading}</h1>
-                <UpdateBtn id={id} />
+                <UpdateBtn id={data._id} />
             </div>
-            <div className={'imageDiv'}><Image src={`${data.featureImg}`} title={data.heading} height={500} width={1000} alt={data.featureImg} /></div>
+            <div className={'imageDiv'}><Image src={`${data.featureImg}`} priority={false} title={data.heading} height={500} width={1000} alt={data.featureImg} /></div>
             <div className={'contentDiv'}>{HTMLReactParser(data.content)}</div>
         </div>
     );

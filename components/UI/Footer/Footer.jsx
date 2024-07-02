@@ -3,10 +3,10 @@ import './footer.css';
 const Footer = () => {
     return (
 
-        < footer className="footer" >
+        <footer className="footer">
             <div className="heading">
                 <h2>
-                    WH<sup>Tribute</sup>
+                    Pirate<sup>Blogs</sup>
                 </h2>
             </div>
             <div className="content">

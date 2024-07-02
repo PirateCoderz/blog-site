@@ -211,6 +211,6 @@ const UpdateBlog = ({ params }) => {
             </div>
         </div>
     );
-}
+};
 
 export default UpdateBlog;

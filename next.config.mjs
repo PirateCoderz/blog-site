@@ -30,8 +30,6 @@ const nextConfig = {
         privateKey: "private_6PG0VcYdQ3bSfma5w4QQYfRtYX4=",
 
         JWT_TOKEN: 'PeakTokenData33'
-
-
     }
 };
 

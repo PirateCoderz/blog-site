@@ -1,5 +1,6 @@
 'use client'
 
+// import adminData from '@/utils/helpers/AdminData';
 import styles from './DeleteBlog.module.css';
 
 import axios from "axios";
@@ -9,24 +10,16 @@ import { useEffect, useState } from 'react';
 
 const DeleteBlog = ({ id }) => {
     const router = useRouter();
-
-    const [isadmin, setisadmin] = useState(false);
+    const [isadmin, setadmin] = useState(false);
 
     useEffect(() => {
-        adminData();
+        // adminfunc();
     }, []);
 
-
-    const adminData = async () => {
-        await axios.get('/api/users/admin').then((result) => {
-            console.log(result.data.result.isAdmin);
-            const temp = result.data.result.isAdmin;
-            setisadmin(temp);
-        }).catch((err) => {
-            console.log("Error while calling admin api")
-        });
+    const adminfunc = async () => {
+        const temp = await adminData();
+        setadmin(temp);
     }
-
     const deleteHandler = async () => {
 
         await axios.delete('http://localhost:3000/api/blogs/' + id)

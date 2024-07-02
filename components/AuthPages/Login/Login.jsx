@@ -2,7 +2,6 @@
 import { useEffect, useState } from 'react';
 import './login.css';
 import { useRouter } from 'next/navigation';
-import toast from 'react-hot-toast';
 import axios from 'axios';
 
 const LoginPage = () => {
@@ -22,12 +21,10 @@ const LoginPage = () => {
             const response = await axios.post('/api/users/login', user);
             if (response.data.success == true) {
                 console.log("Login Success")
-                toast.success("Login Success");
                 router.push('/');
             }
         } catch (err) {
             console.error(err.response.data);
-            toast.error(err.message);
             alert(err.response.data.error);
         } finally {
             setLoading(false);
